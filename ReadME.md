@@ -1,4 +1,4 @@
-###Database Schema
+### Database Schema
 
     Users Table:
         UserID (Primary Key)

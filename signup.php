@@ -126,49 +126,59 @@
                 </a>
                 <h3 class="mb-8 text-4xl md:text-5xl font-bold font-heading" data-config-id="header">Time to feast! <br> Dive into the goodness <span class="text-blue-500">Sign Up</span> </h3>
 
-                <form class="flex flex-wrap -mx-4" action="">
+                <form action="/backend/users.php" method="POST" class="flex flex-wrap -mx-4" action="">
                   <div class="w-full md:w-1/2 px-4 mb-8 md:mb-12">
                     
                     <label for="">
                       <h4 class="mb-5 text-gray-400 uppercase font-bold font-heading">Firstname</h4>
-                      <input class="p-4 w-full border border-gray-200 focus:ring-blue-300 focus:border-blue-300 rounded-md" type="email">
+                      <input name="fname" class="p-4 w-full border border-gray-200 focus:ring-blue-300 focus:border-blue-300 rounded-md" type="text">
                     </label>
                   </div>
                   <div class="w-full md:w-1/2 px-4 mb-12">
                     <label for="">
                       <h4 class="mb-5 text-gray-400 uppercase font-bold font-heading">Lastname</h4>
-                      <input class="p-4 w-full border border-gray-200 focus:ring-blue-300 focus:border-blue-300 rounded-md" type="password">
+                      <input name="lname" class="p-4 w-full border border-gray-200 focus:ring-blue-300 focus:border-blue-300 rounded-md" type="text">
                     </label>
                   </div>
                   <div class="w-full md:w-1/2 px-4 mb-8 md:mb-12">
                     
                     <label for="">
-                      <h4 class="mb-5 text-gray-400 uppercase font-bold font-heading">Your Email</h4>
-                      <input class="p-4 w-full border border-gray-200 focus:ring-blue-300 focus:border-blue-300 rounded-md" type="email">
+                      <h4 class="mb-5 text-gray-400 uppercase font-bold font-heading">Email Address</h4>
+                      <input name="email" class="p-4 w-full border border-gray-200 focus:ring-blue-300 focus:border-blue-300 rounded-md" type="email">
                     </label>
                   </div>
                   <div class="w-full md:w-1/2 px-4 mb-8 md:mb-12">
                     
                     <label for="">
                       <h4 class="mb-5 text-gray-400 uppercase font-bold font-heading">Phone Number</h4>
-                      <input class="p-4 w-full border border-gray-200 focus:ring-blue-300 focus:border-blue-300 rounded-md" type="email">
+                      <input name="phone" class="p-4 w-full border border-gray-200 focus:ring-blue-300 focus:border-blue-300 rounded-md" type="number">
+                    </label>
+                  </div>
+
+                  <div class="w-full md:w-1/2 px-4 mb-12">
+                     <label for="">
+                      <h4 class="mb-5 text-gray-400 uppercase font-bold font-heading">Password</h4>
+                      <input  name="password" id="password" class="p-4 w-full border border-gray-200 focus:ring-blue-300 focus:border-blue-300 rounded-md" type="password">
                     </label>
                   </div>
 
                   <div class="w-full md:w-1/2 px-4 mb-12">
                     <label for="">
-                      <h4 class="mb-5 text-gray-400 uppercase font-bold font-heading">Password</h4>
-                      <input class="p-4 w-full border border-gray-200 focus:ring-blue-300 focus:border-blue-300 rounded-md" type="password">
+                      <h4 class="mb-5 text-gray-400 uppercase font-bold font-heading">Confirm Password</h4>
+                      <input onclick="validate_form()" name="cpassword" id="password2"  class="p-4 w-full border border-gray-200 focus:ring-blue-300 focus:border-blue-300 rounded-md" type="password">
                     </label>
                   </div>
-                  <div class="w-full px-4 mb-12" for="">
+                  <p class="px-4" id="error_msg" style="color:red; display:none">Passwords are not the same</p>
+                  
+
+                  <div class="w-full px-4 mb-12">
                     <label class="flex" for="">
-                      <input class="mr-4 mt-1" type="checkbox">
+                      <input required class="mr-4 mt-1" type="checkbox">
                       <span class="text-sm" data-config-id="terms">By singning up, you agree to our Terms, Data Policy and Cookies.</span>
                     </label>
                   </div>
                   <div class="w-full px-4">
-                    <button class="bg-blue-800 hover:bg-blue-900 text-white font-bold font-heading py-4 mb-2 px-8 rounded-md uppercase" data-config-id="primary-action">Sign Up</button>
+                    <button type="submit" id="btn_01" style="display: none;" name="add_user" class="bg-blue-800 hover:bg-blue-900 text-white font-bold font-heading py-4 mb-2 px-8 rounded-md uppercase" data-config-id="primary-action">Sign Up</button>
                   <p>Don't have an account? <a class="text-blue-500" href="/signup.html">Sign In</a></p>
                   </div>
                 </form>
@@ -297,6 +307,13 @@
 
    
     
+
+
+
+
+
+
+    <script src="/assets/js/js.js"></script>
 </body>
 </html>
 
